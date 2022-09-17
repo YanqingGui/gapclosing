@@ -377,7 +377,7 @@ gapclosing <- function(
     if (!is.null(parallel_cores)) {
       cl <- parallel::makeCluster(parallel_cores)
       doParallel::registerDoParallel(cl)
-      `%domethod%` <- `%dopar%`
+      `%domethod%` <- `%dorng%`
     } else {
       `%domethod%` <- `%do%`
     }
